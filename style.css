@@ -1,0 +1,76 @@
+:root {
+    --primary: #2c1e1a;
+    --accent: #c8a97e;
+    --light: #f5f5f5;
+    --text: #4a4a4a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--accent); }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1500&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 1rem; }
+.hero h1 span { color: var(--accent); }
+.btn-main {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 2rem;
+    transition: 0.4s;
+}
+.btn-main:hover { background: #b08d5f; transform: translateY(-3px); }
+
+/* Menu */
+.menu-section { padding: 5rem 10%; background: var(--light); text-align: center; }
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.menu-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.3s;
+    border-bottom: 4px solid var(--accent);
+}
+.menu-item:hover { transform: translateY(-10px); }
+.price { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+
+footer { padding: 2rem; background: var(--primary); color: white; text-align: center; }
